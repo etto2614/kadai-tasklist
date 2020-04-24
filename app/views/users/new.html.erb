@@ -1,7 +1,9 @@
 <h1>ユーザー登録</h1>
 
 
+
 <%= form_with(model: @user, local: true) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
   <ul>    
     <li> 
       <%= f.label :name, '名前' %>
